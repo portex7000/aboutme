@@ -13,7 +13,7 @@
     </header>
     <div class="profile">
         <div class="profile-info">
-            <img src="https://avatars.githubusercontent.com/u/your-user-id?v=4" alt="Profile Picture">
+            <img src="https://avatars.githubusercontent.com/u/?v=4" alt="Profile Picture">
             <h2>@portex7000</h2>
             <p>🌍 Timezone: UTC +1</p>
             <button id="repos-btn" onclick="window.location.href='https://github.com/portex7000?tab=repositories';">
@@ -23,25 +23,11 @@
         </div>
     </div>
 
-    <div id="login-section">
-        <h3>Log in with GitHub</h3>
-        <button onclick="githubLogin()">Log in</button>
-        <p id="login-status"></p>
-    </div>
-
     <script>
-        // GitHub Login Simulation (OAuth not implemented here for simplicity)
-        async function githubLogin() {
-            // Simulate a login by fetching GitHub user data
-            const username = prompt("Enter your GitHub username (simulation):");
-            if (username) {
-                document.getElementById("login-status").innerText = `Logged in as: ${username}`;
-                
-                // If logged-in user is @portex7000, show the "owner" badge
-                if (username.toLowerCase() === "portex7000") {
-                    document.getElementById("owner-indicator").innerHTML = `<span class="owner-badge">OWNER</span>`;
-                }
-            }
+        // Owner Indicator
+        const username = "portex7000"; // Hardcoded as the page owner's username
+        if (username.toLowerCase() === "portex7000") {
+            document.getElementById("owner-indicator").innerHTML = `<span class="owner-badge">OWNER</span>`;
         }
     </script>
 </body>
